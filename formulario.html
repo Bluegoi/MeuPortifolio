@@ -104,7 +104,7 @@
 <div class="main-container">
   <div class="form-container">
     <h2>Envie sua mensagem:</h2>
-    <form id="contactForm">
+    <form action="https://formspree.io/f/myzeagrn" method="POST">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
@@ -114,7 +114,7 @@
       <label for="message">Mensagem:</label>
       <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" onclick="return enviarMensagem()">Enviar</button>
     </form>
   </div>
   <div class="image-container">
@@ -123,36 +123,14 @@
 </div>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('https://formspree.io/f/myzeagrn', {
-      method: 'POST',
-      body: formData
-    }).then(response => {
-      if (response.ok) {
-        const nome = document.getElementById('name').value;
-        alert(`${nome}, sua mensagem foi enviada com sucesso!`);
-        
-        setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 1500);
-      } else {
-        alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-      }
-    }).catch(error => {
-      alert("Ocorreu um erro. Tente novamente.");
-    });
-  });
+  function enviarMensagem() {
+    const nome = document.getElementById('name').value;
+    alert(`${nome}, sua mensagem foi enviada com sucesso!`);
+    return true; // deixa o formulário ser enviado
+  }
 </script>
 
 </body>
 </html>
-
-</body>
-</html>
-
 
 
