@@ -124,7 +124,7 @@
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const formData = new FormData(this);
 
@@ -136,7 +136,9 @@
         const nome = document.getElementById('name').value;
         alert(`${nome}, sua mensagem foi enviada com sucesso!`);
         
-        window.location.href = 'agradecimento.html'; 
+        setTimeout(() => {
+          window.location.href = 'agradecimento.html';
+        }, 1500);
       } else {
         alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
       }
@@ -148,5 +150,6 @@
 
 </body>
 </html>
+
 
 
