@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
 
-    <style>
-        /* Estilos para centralizar o layout */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b78d1;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b78d1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        .main-container {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .main-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        .form-container {
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            width: 100%;
-            max-width: 500px;
-            color: white;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
+    .form-container {
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 500px;
+      color: white;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
 
-        .image-container {
-            width: 100%;
-            max-width: 250px;
-        }
+    .image-container {
+      width: 100%;
+      max-width: 250px;
+    }
 
-        .image-container img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-        }
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-        label {
-            font-size: 14px;
-            margin-bottom: 8px;
-            display: block;
-        }
+    label {
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: block;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            box-sizing: border-box;
-        }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      box-sizing: border-box;
+    }
 
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
+    input::placeholder, textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
 
-        button {
-            background-color: hsl(207, 88%, 29%);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
+    button {
+      background-color: hsl(207, 88%, 29%);
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
 
-        button:hover {
-            background-color: #045888;
-        }
+    button:hover {
+      background-color: #045888;
+    }
 
-        /* Estilos responsivos */
-        @media (max-width: 800px) {
-            .main-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .form-container, .image-container {
-                max-width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
+    @media (max-width: 800px) {
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .form-container, .image-container {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <div class="main-container">
-    <div class="form-container">
-        <h2>Envie sua mensagem:</h2>
-        <form id="contactForm" onsubmit="showAlert(event)">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+  <div class="form-container">
+    <h2>Envie sua mensagem:</h2>
+    <form action="https://formspree.io/f/myzeagrn" method="POST" onsubmit="enviarMensagem()">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-    <div class="image-container">
-        <img src="guypc.png" alt="Sua Foto" style="width: 400px; height: auto;"> 
-    </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <div class="image-container">
+    <img src="guypc.png" alt="Sua Foto" style="width: 400px; height: auto;"> 
+  </div>
 </div>
 
 <script>
-    function showAlert(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        alert(`${name}, sua mensagem foi enviada com sucesso!`);
-    }
+  function enviarMensagem() {
+    const nome = document.getElementById('name').value;
+    alert(`${nome}, sua mensagem foi enviada com sucesso!`);
+  }
 </script>
 
 </body>
