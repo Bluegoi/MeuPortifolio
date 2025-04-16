@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -104,7 +105,7 @@
 <div class="main-container">
   <div class="form-container">
     <h2>Envie sua mensagem:</h2>
-    <form action="https://formspree.io/f/myzeagrn" method="POST" onsubmit="enviarMensagem()">
+    <form action="https://formspree.io/f/myzeagrn" method="POST">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
@@ -114,7 +115,7 @@
       <label for="message">Mensagem:</label>
       <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" onclick="return enviarMensagem()">Enviar</button>
     </form>
   </div>
   <div class="image-container">
@@ -126,6 +127,7 @@
   function enviarMensagem() {
     const nome = document.getElementById('name').value;
     alert(`${nome}, sua mensagem foi enviada com sucesso!`);
+    return true; // deixa o formulário ser enviado
   }
 </script>
 
