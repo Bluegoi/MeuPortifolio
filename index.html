@@ -6,154 +6,156 @@
     <title>Rian Ciscotto - Portifólio</title>
     <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-        .top-bar {
-            background-color: #333;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
+    .top-bar {
+        background-color: #333;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
 
-        .portfolio-title {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+    .portfolio-title {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
 
-        .portfolio-title a {
-            color: white;
-        }
+    .portfolio-title a {
+        color: white;
+    }
 
+    .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-text {
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+        color: #333;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+        color: #666;
+        max-width: 500px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 50%;
+    }
+
+    .featured-projects {
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .project-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 23%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card h3 {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        margin: 0;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 1200px) {
+        .project-card {
+            width: 30%;
+        }
+    }
+
+    @media (max-width: 768px) {
         .hero-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
             flex-direction: column;
             text-align: center;
         }
 
-        .hero-text {
-            margin-bottom: 20px;
-        }
-
         .hero-text h1 {
-            font-size: 2em;
-            color: #333;
+            font-size: 1.8em;
         }
 
         .hero-text p {
-            font-size: 1.1em;
-            color: #666;
-            max-width: 500px;
-        }
-
-        .hero-image img {
+            font-size: 1em;
             max-width: 100%;
-            height: auto;
-            max-height: 300px;
-            border-radius: 50%;
-        }
-
-        .featured-projects {
-            padding: 20px;
-            background-color: #f4f4f4;
         }
 
         .project-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
+            flex-direction: column;
         }
 
         .project-card {
-            width: 23%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            padding: 10px;
-            color: white;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .top-bar {
+            flex-direction: column;
+            align-items: center;
         }
 
-        .project-card h3 {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            margin: 0;
+        .portfolio-title {
+            font-size: 1.2em;
+            text-align: center;
         }
 
-        .project-card:hover {
-            transform: scale(1.05);
+        .hero-text h1 {
+            font-size: 1.5em;
         }
 
-        @media (max-width: 1200px) {
-            .project-card {
-                width: 30%;
-            }
+        .hero-text p {
+            font-size: 0.9em;
         }
+    }
+</style>
 
-        @media (max-width: 768px) {
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 1.8em;
-            }
-
-            .hero-text p {
-                font-size: 1em;
-                max-width: 100%;
-            }
-
-            .project-card-container {
-                flex-direction: column;
-            }
-
-            .project-card {
-                width: 100%;
-                height: auto;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .top-bar {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .portfolio-title {
-                font-size: 1.2em;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 1.5em;
-            }
-
-            .hero-text p {
-                font-size: 0.9em;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="top-bar">
