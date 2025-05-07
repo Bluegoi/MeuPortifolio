@@ -41,23 +41,31 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            flex-direction: column;
+            flex-direction: row;
             text-align: center;
+            background-color: #007BFF; /* Fundo azul */
         }
 
         .hero-text {
             margin-bottom: 20px;
+            flex: 1; /* Garante que o texto ocupe o espaço restante */
         }
 
         .hero-text h1 {
             font-size: 2em;
-            color: #333;
+            color: #fff;
         }
 
         .hero-text p {
             font-size: 1.1em;
-            color: #666;
+            color: #fff;
             max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
         .hero-image img {
@@ -110,7 +118,7 @@
 
         @media (max-width: 768px) {
             .hero-section {
-                flex-direction: column;
+                flex-direction: column; /* Imagem abaixo do texto em telas menores */
                 text-align: center;
             }
 
@@ -121,6 +129,10 @@
             .hero-text p {
                 font-size: 1em;
                 max-width: 100%;
+            }
+
+            .hero-image img {
+                max-height: 200px; /* Ajuste da altura da imagem em dispositivos menores */
             }
 
             .project-card-container {
