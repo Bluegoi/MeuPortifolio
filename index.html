@@ -4,175 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rian Ciscotto - Portifólio</title>
-    <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .top-bar {
-        background-color: #333;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-    }
-
-    .portfolio-title {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .portfolio-title a {
-        color: white;
-    }
-
-    .hero-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .hero-text {
-        margin-right: 20px;
-        text-align: left;
-    }
-
-    .hero-text h1 {
-        font-size: 2em;
-        color: #333;
-    }
-
-    .hero-text p {
-        font-size: 1.1em;
-        color: #666;
-        max-width: 500px;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-        max-height: 300px;
-        border-radius: 50%;
-    }
-
-    .featured-projects {
-        padding: 20px;
-        background-color: #f4f4f4;
-    }
-
-    .project-card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .project-card {
-        width: 23%;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-end;
-        padding: 10px;
-        color: white;
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .project-card h3 {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        margin: 0;
-    }
-
-    .project-card:hover {
-        transform: scale(1.05);
-    }
-
-    @media (max-width: 1200px) {
-        .project-card {
-            width: 30%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .hero-section {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-size: 1.8em;
-        }
-
-        .hero-text p {
-            font-size: 1em;
-            max-width: 100%;
-        }
-
-        .project-card-container {
-            flex-direction: column;
-        }
-
-        .project-card {
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .top-bar {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .portfolio-title {
-            font-size: 1.2em;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-size: 1.5em;
-        }
-
-        .hero-text p {
-            font-size: 0.9em;
-        }
-    }
-</style>
-
+     <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Barra Superior -->
     <header class="top-bar">
         <span class="portfolio-title">Portfólio - Rian Ciscotto</span>
-        <span class="portfolio-title"><a href="formulario.html" target="_blank" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: rgb(255, 255, 255);">Contato</a></span>
+    <!--<span class="portfolio-title"><img src="js.png" alt=""></span>-->
+        
+        <span class="portfolio-title">       <a href="formulario.html" target="_blank " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: rgb(255, 255, 255);">Contato</a>    </span>
+
+        </div>
     </header>
 
+    <!-- Seção Principal -->
     <main class="hero-section">
         <div class="hero-text">
             <h1>Cursando <span class="highlight">Engenharia de Software</span> <br>e <span class="highlight">Análise de Sistemas</span></h1>
-            <p>Cursando Engenharia de Software na Universidade Vassouras com foco em criação de sites e aplicações para facilitar o dia a dia das empresas e pessoas. Aberto a novas oportunidades e desafios para expandir meus conhecimentos em programação. Para mais informações e solicitações de serviço acesse: <a href="formulario.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: rgb(0, 153, 255);">Contato</a></p>
+            <p>Cursando Engenharia de Software na Universidade Vassouras com foco em criação de sites e aplicações para facilitar o dia a dia das empresas e pessoas. Aberto a novas oportunidades e desafios para expandir meus conhecimentos em programação. Para mais informações e solicitações de serviço acesse: <a href="formulario.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: rgb(0, 153, 255);">Contato</a>
+            
+            </p>
         </div>
         <div class="hero-image">
             <img src="guypc.png" alt="Imagem de Rian Ciscotto">
         </div>
     </main>
 
+    <!-- Seção de Projetos em Destaque -->
     <section class="featured-projects">
         <h2 style="text-align: left;">Projetos em Destaque 🠗<br><br></h2>
         <div class="project-card-container">
@@ -194,6 +53,9 @@
             </a>
         </div>
         <br><br><br>
+
+
+
         <div class="project-card-container">
             <a href="https://bluegoi.github.io/Site-Musical/" target="_blank" class="project-card" style="background-image: url('ncs.png');">
                 <h3>NCS</h3>
@@ -213,7 +75,8 @@
             </a>
         </div>
     </section>
-    <h1><br></h1>
+<h1><br></h1>
+    <!-- Rodapé -->
     <footer class="footer">
         <p>&copy; 2024 Rian Ciscotto</p>
         <p>
@@ -223,5 +86,7 @@
             <a href="formulario.html" target="_blank">Contato</a>
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
