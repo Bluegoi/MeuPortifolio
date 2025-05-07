@@ -98,15 +98,17 @@
       }
     }
   </style>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
 <div class="main-container">
   <div class="form-container">
     <h2>Envie sua mensagem:</h2>
-    <form action="https://formspree.io/f/myzeagrn" method="POST">
+    <form action="https://formspree.io/f/myzeagrn" method="POST" onsubmit="return validarFormulario()">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+      <input type="email" id="email" name="email" placeholder="Digite seu melhor email" required>
 
       <label for="name">Nome:</label>
       <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
@@ -114,7 +116,14 @@
       <label for="message">Mensagem:</label>
       <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
 
-      <button type="submit" onclick="return enviarMensagem()">Enviar</button>
+      <div style="display:none;">
+        <label for="honeypot">Deixe este campo em branco:</label>
+        <input type="text" id="honeypot" name="honeypot">
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="SUA_CHAVE_SITE"></div>
+
+      <button type="submit">Enviar</button>
     </form>
   </div>
   <div class="image-container">
@@ -123,10 +132,29 @@
 </div>
 
 <script>
-  function enviarMensagem() {
+  function validarFormulario() {
+    const honeypot = document.getElementById('honeypot').value;
+    if (honeypot) {
+      alert("Formulario detectado como spam.");
+      return false;
+    }
+
+    const email = document.getElementById('email').value;
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!regexEmail.test(email)) {
+      alert("Por favor, insira um email válido.");
+      return false;
+    }
+
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      alert("Por favor, verifique o reCAPTCHA.");
+      return false;
+    }
+
     const nome = document.getElementById('name').value;
     alert(`${nome}, sua mensagem foi enviada com sucesso!`);
-    return true; // deixa o formulário ser enviado
+    return true;
   }
 </script>
 
