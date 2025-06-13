@@ -10,60 +10,73 @@
 <body>
    <style>
      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    
-    padding: 0;
-}
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+     }
 
-.top-bar {
-    background-color: rgb(0, 153, 255);
-    color: white;
-    padding: 10px;
-    font-size: 10px;
-    text-align: center;
-}
+     .top-bar {
+        background-color: rgb(0, 153, 255);
+        color: white;
+        padding: 10px;
+        font-size: 10px;
+        text-align: center;
+     }
 
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+     .hero-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+     }
 
-.project-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-}
+     .hero-text {
+        flex: 1;
+        padding-right: 20px;
+     }
 
-.project-card {
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    padding: 10px;
-}
+     .hero-image {
+        max-width: 250px;
+     }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
+     .hero-image img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+     }
 
-@media (max-width: 600px) {
-    .project-card {
-        width: 90%;
-    }
-}
+     .project-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+     }
 
-     </style>
+     .project-card {
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        padding: 10px;
+     }
+
+     .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+     }
+
+     @media (max-width: 600px) {
+        .project-card {
+            width: 90%;
+        }
+     }
+   </style>
     <header class="top-bar" style="font-size: 20px;">
         <span class="portfolio-title" style="font-size: 20px; font-family: Arial, sans-serif;">Portfólio - Rian Ciscotto</span>
         <span class="portfolio-title">
@@ -135,5 +148,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
