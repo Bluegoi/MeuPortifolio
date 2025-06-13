@@ -117,11 +117,11 @@
       <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem" required></textarea>
 
       <div style="display:none;">
-        <label for="honeypot">Deixe este campo em branco:</label>
+        <label for="honeypot"></label>
         <input type="text" id="honeypot" name="honeypot">
       </div>
 
-      <div class="g-recaptcha" data-sitekey="SUA_CHAVE_SITE"></div>
+     
 
       <button type="submit">Enviar</button>
     </form>
@@ -146,11 +146,7 @@
       return false;
     }
 
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-      alert("Por favor, verifique o reCAPTCHA.");
-      return false;
-    }
+ 
 
     const nome = document.getElementById('name').value;
     alert(`${nome}, sua mensagem foi enviada com sucesso!`);
