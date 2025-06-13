@@ -5,76 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rian Ciscotto - Portifólio</title>
     <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        .barraTopo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 1rem 2rem;
+        }
+
+        .tituloPortfolio {
+            font-size: 1.2rem;
+        }
+
+        .secaoHeroi {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+
+        .textoHeroi {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 1rem;
+        }
+
+        .imagemHeroi {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 1rem;
+        }
+
+        .imagemHeroi img {
+            width: 100%;
+            height: auto;
+        }
+
+        .destaque {
+            color: #0099ff;
+        }
+
+        .meusProjetos {
+            padding: 2rem;
+        }
+
+        .containerProjetos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .cartaoProjeto {
+            width: 250px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .cartaoProjeto:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1f1f1f;
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .containerProjetos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="top-bar">
-        <span class="portfolio-title">Portfólio - Rian Ciscotto</span>
-        <span class="portfolio-title">
+    <header class="barraTopo">
+        <span class="tituloPortfolio">Portfólio - Rian Ciscotto</span>
+        <span class="tituloPortfolio">
             <a href="formulario.html" target="_blank" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: rgb(255, 255, 255);">
                 Contato
             </a>
         </span>
     </header>
 
-    <main class="hero-section">
-        <div class="hero-text">
-            <h1>Cursando <span class="highlight">Engenharia de Software</span> <br>e <span class="highlight">Análise de Sistemas</span></h1>
+    <main class="secaoHeroi">
+        <div class="textoHeroi">
+            <h1>Cursando <span class="destaque">Engenharia de Software</span> <br>e <span class="destaque">Análise de Sistemas</span></h1>
             <p>
-                Cursando Engenharia de Software na Universidade Vassouras com foco em criação de sites e aplicações para facilitar o dia a dia das empresas e pessoas. Aberto a novas oportunidades e desafios para expandir meus conhecimentos em programação. Para mais informações e solicitações de serviço acesse: 
+                Cursando Engenharia de Software na Universidade Vassouras com foco em criação de sites e aplicações para facilitar o dia a dia das empresas e pessoas. Aberto a novas oportunidades e desafios para expandir meus conhecimentos em programação. Para mais informações e solicitações de serviço acesse:
                 <a href="formulario.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: rgb(0, 153, 255);">Contato</a>
             </p>
         </div>
-        <div class="hero-image">
-            <img src="guypc.png" alt="Imagem de Rian Ciscotto">
+        <div class="imagemHeroi">
+            <img src="guypc.png" alt="">
         </div>
     </main>
 
-    <section class="featured-projects">
-        <h2 style="text-align: left;">Projetos em Destaque 🠗<br><br></h2>
-
-        <div class="project-card-container">
-            <a href="https://bluegoi.github.io/Queimadas/" target="_blank" class="project-card" style="background-image: url('fogo.png');">
+    <section class="meusProjetos">
+        <h2 style="text-align: left;">Projetos em Destaque 🢗<br><br></h2>
+        <div class="containerProjetos">
+            <a href="https://bluegoi.github.io/Queimadas/" target="_blank" class="cartaoProjeto" style="background-image: url('fogo.png');">
                 <h3>queimadas</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/RelogioDigital/" class="project-card" target="_blank" style="background-image: url('clock.png');">
+            <a href="https://bluegoi.github.io/RelogioDigital/" target="_blank" class="cartaoProjeto" style="background-image: url('clock.png');">
                 <h3>Relógio Digital</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/GoTrip/" class="project-card" target="_blank" style="background-image: url('gotrip.png');">
+            <a href="https://bluegoi.github.io/GoTrip/" target="_blank" class="cartaoProjeto" style="background-image: url('gotrip.png');">
                 <h3>GoTrip</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/Cafeteria/" class="project-card" target="_blank" style="background-image: url('cafeteria.png');">
+            <a href="https://bluegoi.github.io/Cafeteria/" target="_blank" class="cartaoProjeto" style="background-image: url('cafeteria.png');">
                 <h3>Cafeteria Café & Conforto</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
         </div>
-
         <br><br><br>
-
-        <div class="project-card-container">
-            <a href="https://bluegoi.github.io/Site-Musical/" target="_blank" class="project-card" style="background-image: url('ncs.png');">
+        <div class="containerProjetos">
+            <a href="https://bluegoi.github.io/Site-Musical/" target="_blank" class="cartaoProjeto" style="background-image: url('ncs.png');">
                 <h3>NCS</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/ConversorDeTemperatura/" class="project-card" target="_blank" style="background-image: url('temp.png');">
-                <h3>Conversor de Tempetatura</h3>
-                <span class="likes"></span>
+            <a href="https://bluegoi.github.io/ConversorDeTemperatura/" target="_blank" class="cartaoProjeto" style="background-image: url('temp.png');">
+                <h3>Conversor de Temperatura</h3>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/ToDoList/" class="project-card" target="_blank" style="background-image: url('listatarefas.png');">
+            <a href="https://bluegoi.github.io/ToDoList/" target="_blank" class="cartaoProjeto" style="background-image: url('listatarefas.png');">
                 <h3>Lista de Tarefas</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
-            <a href="https://bluegoi.github.io/ContCaracteres/" class="project-card" target="_blank" style="background-image: url('caracteres.png');">
+            <a href="https://bluegoi.github.io/ContCaracteres/" target="_blank" class="cartaoProjeto" style="background-image: url('caracteres.png');">
                 <h3>Contador de caracteres</h3>
-                <span class="likes"></span>
+                <span class="curtidas"></span>
             </a>
         </div>
     </section>
-
-    <h1><br></h1>
 
     <footer class="footer">
         <p>&copy; 2024 Rian Ciscotto</p>
@@ -89,3 +193,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
