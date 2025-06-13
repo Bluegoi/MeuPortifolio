@@ -1,145 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rian Ciscotto - Portfólio</title>
-    <link rel="shortcut icon" href="guypc.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .project-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rian Ciscotto - Portifólio</title>
+  <link rel="shortcut icon" href="guypc.png" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
 
-        .project-card {
-            width: 250px;
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            align-items: flex-end;
-            padding: 10px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
+    .top-bar {
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
 
-        @media (max-width: 768px) {
-            .project-card {
-                width: 90%;
-            }
-        }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-        }
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
 
-        .hero-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
+    .hero-text {
+      flex: 1 1 300px;
+      max-width: 600px;
+      padding: 1rem;
+    }
 
-        .hero-text, .hero-image {
-            flex: 1 1 300px;
-            max-width: 500px;
-            padding: 1rem;
-        }
+    .highlight {
+      color: #0099ff;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #f0f0f0;
-        }
+    .hero-image {
+      flex: 1 1 300px;
+      max-width: 400px;
+      padding: 1rem;
+      text-align: center;
+    }
 
-        .highlight {
-            color: #0099ff;
-        }
-    </style>
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .featured-projects {
+      padding: 1rem 2rem;
+    }
+
+    .featured-projects h2 {
+      text-align: left;
+    }
+
+    .project-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project-card {
+      background-size: cover;
+      background-position: center;
+      width: 250px;
+      height: 150px;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .project-card-container {
+        justify-content: center;
+      }
+      .project-card {
+        width: 90%;
+      }
+      .featured-projects h2 {
+        text-align: center;
+      }
+    }
+
+    footer.footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f5f5f5;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer.footer a {
+      color: #0099ff;
+      text-decoration: none;
+      margin: 0 0.4rem;
+    }
+  </style>
 </head>
 <body>
+  <header class="top-bar">
+    <span class="portfolio-title">Portfólio - Rian Ciscotto</span>
+    <span class="portfolio-title">
+      <a href="formulario.html" target="_blank">Contato</a>
+    </span>
+  </header>
 
-    <header class="top-bar">
-        <span class="portfolio-title">Portfólio - Rian Ciscotto</span>
-        <span class="portfolio-title">
-            <a href="formulario.html" target="_blank" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-decoration: none; color: white;">
-                Contato
-            </a>
-        </span>
-    </header>
+  <main class="hero-section">
+    <div class="hero-text">
+      <h1>
+        Cursando
+        <span class="highlight">Engenharia de Software</span> <br />
+        e <span class="highlight">Análise de Sistemas</span>
+      </h1>
+      <p>
+        Cursando Engenharia de Software na Universidade Vassouras com foco em
+        criação de sites e aplicações para facilitar o dia a dia das empresas e
+        pessoas. Aberto a novas oportunidades e desafios para expandir meus
+        conhecimentos em programação. Para mais informações e solicitações de
+        serviço acesse:
+        <a href="formulario.html" target="_blank" style="color:#0099ff; text-decoration:none;">Contato</a>
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="guypc.png" alt="Imagem de Rian Ciscotto" />
+    </div>
+  </main>
 
-    <main class="hero-section">
-        <div class="hero-text">
-            <h1>Cursando <span class="highlight">Engenharia de Software</span> <br>e <span class="highlight">Análise de Sistemas</span></h1>
-            <p>
-                Cursando Engenharia de Software na Universidade Vassouras com foco em criação de sites e aplicações para facilitar o dia a dia das empresas e pessoas. Aberto a novas oportunidades e desafios para expandir meus conhecimentos em programação. Para mais informações e solicitações de serviço acesse:
-                <a href="formulario.html" target="_blank" style="text-decoration: none; color: #0099ff;">Contato</a>
-            </p>
-        </div>
-        <div class="hero-image">
-            <img src="guypc.png" alt="Imagem de Rian Ciscotto" style="max-width: 100%;">
-        </div>
-    </main>
+  <section class="featured-projects">
+    <h2>Projetos em Destaque 🠗</h2>
+    <br />
+    <div class="project-card-container">
+      <a
+        href="https://rianciscotto.github.io/Queimadas/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('fogo.png');"
+        ><h3>queimadas</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/RelogioDigital/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('clock.png');"
+        ><h3>Relógio Digital</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/GoTrip/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('gotrip.png');"
+        ><h3>GoTrip</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/Cafeteria/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('cafeteria.png');"
+        ><h3>Cafeteria Café & Conforto</h3></a
+      >
+    </div>
 
-    <section class="featured-projects">
-        <h2 style="text-align: center;">Projetos em Destaque 🠗</h2>
-        <br>
-        <div class="project-card-container">
-            <a href="https://rianciscotto.github.io/Queimadas/" target="_blank" class="project-card" style="background-image: url('fogo.png');">
-                <h3>Queimadas</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/RelogioDigital/" target="_blank" class="project-card" style="background-image: url('clock.png');">
-                <h3>Relógio Digital</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/GoTrip/" target="_blank" class="project-card" style="background-image: url('gotrip.png');">
-                <h3>GoTrip</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/Cafeteria/" target="_blank" class="project-card" style="background-image: url('cafeteria.png');">
-                <h3>Cafeteria Café & Conforto</h3>
-            </a>
-        </div>
+    <br /><br />
 
-        <br><br>
+    <div class="project-card-container">
+      <a
+        href="https://rianciscotto.github.io/Site-Musical/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('ncs.png');"
+        ><h3>NCS</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/ConversorDeTemperatura/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('temp.png');"
+        ><h3>Conversor de Tempetatura</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/ToDoList/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('listatarefas.png');"
+        ><h3>Lista de Tarefas</h3></a
+      >
+      <a
+        href="https://rianciscotto.github.io/ContCaracteres/"
+        target="_blank"
+        class="project-card"
+        style="background-image: url('caracteres.png');"
+        ><h3>Contador de caracteres</h3></a
+      >
+    </div>
+  </section>
 
-        <div class="project-card-container">
-            <a href="https://rianciscotto.github.io/Site-Musical/" target="_blank" class="project-card" style="background-image: url('ncs.png');">
-                <h3>NCS</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/ConversorDeTemperatura/" target="_blank" class="project-card" style="background-image: url('temp.png');">
-                <h3>Conversor de Temperatura</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/ToDoList/" target="_blank" class="project-card" style="background-image: url('listatarefas.png');">
-                <h3>Lista de Tarefas</h3>
-            </a>
-            <a href="https://rianciscotto.github.io/ContCaracteres/" target="_blank" class="project-card" style="background-image: url('caracteres.png');">
-                <h3>Contador de Caracteres</h3>
-            </a>
-        </div>
-    </section>
+  <footer class="footer">
+    <p>&copy; 2024 Rian Ciscotto</p>
+    <p>
+      <a href="https://br.linkedin.com/in/rian-ciscotto-a5bb38191" target="_blank"
+        >LinkedIn</a
+      >
+      |
+      <a
+        href="https://www.instagram.com/rianciscotto/?utm_source=ig_web_button_share_sheet"
+        target="_blank"
+        >Instagram</a
+      >
+      |
+      <a href="https://github.com/rianciscotto" target="_blank">GitHub</a> |
+      <a href="formulario.html" target="_blank">Contato</a>
+    </p>
+  </footer>
 
-    <footer class="footer">
-        <p>&copy; 2024 Rian Ciscotto</p>
-        <p>
-            <a href="https://br.linkedin.com/in/rian-ciscotto-a5bb38191" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/rianciscotto/" target="_blank">Instagram</a> |
-            <a href="https://github.com/rianciscotto" target="_blank">GitHub</a> |
-            <a href="formulario.html" target="_blank">Contato</a>
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
