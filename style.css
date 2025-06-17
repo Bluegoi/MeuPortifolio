@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1b2a;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #0077b6;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.portfolio-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+.menu-icon span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.hero-text p {
+    margin-top: 1rem;
+    color: #ffffff;
+    max-width: 500px;
+}
+
+.highlight {
+    color: #00b4d8;
+    font-weight: bold;
+}
+
+.hero-image {
+    max-width: 350px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.featured-projects {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.featured-projects h2 {
+    font-size: 2rem;
+    color: #caf0f8;
+    margin-bottom: 1.5rem;
+}
+
+.project-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 22%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #f1f1f1;
+}
+
+.footer a:first-child {
+    margin-left: 0;
+}
+
+.footer a:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: row;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 350px;
+    }
+
+    .project-card {
+        width: 24%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 300px;
+        margin-top: 1rem;
+    }
+
+    .project-card {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+        text-align: center;
+
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 280px;
+        margin-top: 1rem;
+    }
+
+    .project-card {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+        margin-top: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 48%; 
+    }
+}
+ body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+     }
+
+     .top-bar {
+        background-color: rgb(0, 153, 255);
+        color: white;
+        padding: 10px;
+        font-size: 10px;
+        text-align: center;
+     }
+
+     .hero-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+     }
+
+     .hero-text {
+        flex: 1;
+        padding-right: 20px;
+     }
+
+     .hero-image {
+        max-width: 350px;
+     }
+
+     .hero-image img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+     }
+
+     .project-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+     }
+
+     .project-card {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        padding: 10px;
+     }
+
+     .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+     }
+
+     @media (max-width: 600px) {
+        .project-card {
+            width: 90%;
+        }
+     }
+
+
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinhado à esquerda por padrão */
+    gap: 20px;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para os ícones */
+.skills-container img {
+    width: 70px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.skills-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Telas menores que 768px: centraliza os ícones */
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .skills-container img {
+        width: 60px;
+    }
+}
+
+/* Telas menores que 480px: centraliza com menor tamanho */
+@media (max-width: 480px) {
+    .skills-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .skills-container img {
+        width: 50px;
+    }
+}
